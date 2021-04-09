@@ -1,4 +1,4 @@
-# certificateGenerator
+# Golang Invoice creator
 
 ## package
 
