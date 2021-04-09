@@ -12,6 +12,29 @@ func main() {
 	fmt.Printf("width=%v, height=%v\n", w, h)
 	pdf.AddPage()
 
+	const (
+		bannerHt = 94.0
+		xIndent  = 40.0
+	)
+	pdf.SetFillColor(103, 60, 79)
+	pdf.Polygon([]gofpdf.PointType{
+		{0, 0},
+		{w, 0},
+		{w, bannerHt},
+		{0, bannerHt * 0.9},
+	}, "F")
+	pdf.Polygon([]gofpdf.PointType{
+		{0, h},
+		{0, h - (bannerHt * 0.2)},
+		{w, h - (bannerHt * 0.1)},
+		{w, h},
+	}, "F")
+
+	pdf.SetFont("Arial", "B", 40)
+	pdf.SetTextColor(255, 255, 255)
+	_, lineHt := pdf.GetFontSize()
+	pdf.Text(xIndent, bannerHt-(bannerHt/2.0)+lineHt/2.9, "INVOICE")
+
 	// Grid
 	drawGrid(pdf)
 
