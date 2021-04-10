@@ -41,7 +41,6 @@ func main() {
 	pdf.SetFont("arial", "", 12)
 	pdf.SetTextColor(255, 255, 255)
 	_, lineHt = pdf.GetFontSize()
-
 	pdf.MoveTo(w-xIndent-2.0*124.0, (bannerHt-(lineHt*1.5*3.0))/2.0)
 	pdf.MultiCell(124.0, lineHt*1.5, "01853566901\n raihan@gmail.com\nraihaninfo.com", gofpdf.BorderNone, gofpdf.AlignRight, false)
 
@@ -49,7 +48,6 @@ func main() {
 	pdf.SetFont("arial", "", 12)
 	pdf.SetTextColor(255, 255, 255)
 	_, lineHt = pdf.GetFontSize()
-
 	pdf.MoveTo(w-xIndent-124.0, (bannerHt-(lineHt*1.5*3.0))/2.0)
 	pdf.MultiCell(124.0, lineHt*1.5, "312 burhan plaza\n Uttora S/3\n312 Dhaka", gofpdf.BorderNone, gofpdf.AlignRight, false)
 
