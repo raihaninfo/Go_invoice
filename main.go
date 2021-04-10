@@ -38,7 +38,6 @@ func main() {
 	pdf.Text(xIndent, bannerHt-(bannerHt/2.0)+lineHt/2.9, "INVOICE")
 
 	// Address &phone email
-
 	pdf.SetFont("arial", "", 12)
 	pdf.SetTextColor(255, 255, 255)
 	_, lineHt = pdf.GetFontSize()
@@ -47,7 +46,6 @@ func main() {
 	pdf.MultiCell(124.0, lineHt*1.5, "01853566901\n raihan@gmail.com\nraihaninfo.com", gofpdf.BorderNone, gofpdf.AlignRight, false)
 
 	// Address
-
 	pdf.SetFont("arial", "", 12)
 	pdf.SetTextColor(255, 255, 255)
 	_, lineHt = pdf.GetFontSize()
