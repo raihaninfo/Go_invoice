@@ -54,7 +54,7 @@ func main() {
 	// Grid
 	// drawGrid(pdf)
 
-	err := pdf.OutputFileAndClose("p1.pdf")
+	err := pdf.OutputFileAndClose("pdf1.pdf")
 	if err != nil {
 		panic(err)
 	}
