@@ -51,6 +51,10 @@ func main() {
 	pdf.MoveTo(w-xIndent-124.0, (bannerHt-(lineHt*1.5*3.0))/2.0)
 	pdf.MultiCell(124.0, lineHt*1.5, "312 burhan plaza\n Uttora S/3\n312 Dhaka", gofpdf.BorderNone, gofpdf.AlignRight, false)
 
+	pdf.ImageOptions("images/logo.png", 240, 10, 70, 0, false, gofpdf.ImageOptions{
+		ReadDpi: true,
+	}, 0, "")
+
 	// Grid
 	// drawGrid(pdf)
 
