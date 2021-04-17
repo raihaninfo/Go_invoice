@@ -12,6 +12,7 @@ const (
 )
 
 func main() {
+
 	pdf := gofpdf.New(gofpdf.OrientationPortrait, gofpdf.UnitPoint, gofpdf.PageSizeLetter, "")
 	w, h := pdf.GetPageSize()
 	fmt.Printf("width=%v, height=%v\n", w, h)
@@ -24,6 +25,7 @@ func main() {
 		{w, bannerHt},
 		{0, bannerHt * 0.9},
 	}, "F")
+
 	pdf.Polygon([]gofpdf.PointType{
 		{0, h},
 		{0, h - (bannerHt * 0.2)},
@@ -61,6 +63,7 @@ func main() {
 	x, y := xIndent, bannerHt+lineHt+2.0
 	pdf.Text(x, y, "Billed To")
 	pdf.SetTextColor(50, 50, 50)
+	
 	y = y + lineHt + 1.5
 	pdf.Text(x, y, "Client Name")
 	y = y + lineHt + 1.25
@@ -72,7 +75,7 @@ func main() {
 
 	// Grid
 	drawGrid(pdf)
-	
+
 	err := pdf.OutputFileAndClose("pdf1.pdf")
 	if err != nil {
 		panic(err)
