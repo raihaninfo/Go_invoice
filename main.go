@@ -56,7 +56,6 @@ func main() {
 	}, 0, "")
 
 	// Grid
-
 	// drawGrid(pdf)
 
 	err := pdf.OutputFileAndClose("pdf1.pdf")
