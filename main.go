@@ -63,7 +63,7 @@ func main() {
 	x, y := xIndent, bannerHt+lineHt+2.0
 	pdf.Text(x, y, "Billed To")
 	pdf.SetTextColor(50, 50, 50)
-	
+
 	y = y + lineHt + 1.5
 	pdf.Text(x, y, "Client Name")
 	y = y + lineHt + 1.25
@@ -74,7 +74,7 @@ func main() {
 	pdf.Text(x, y, "Postel Code")
 
 	// Grid
-	drawGrid(pdf)
+	// drawGrid(pdf)
 
 	err := pdf.OutputFileAndClose("pdf1.pdf")
 	if err != nil {
