@@ -55,8 +55,25 @@ func main() {
 		ReadDpi: true,
 	}, 0, "")
 
+	pdf.SetFont("times", "", 14)
+	pdf.SetTextColor(180, 180, 180)
+	_, lineHt = pdf.GetFontSize()
+	x, y := xIndent, bannerHt+lineHt+2.0
+	pdf.Text(x, y, "Billed To")
+	pdf.SetTextColor(50, 50, 50)
+	// pdf.MoveTo(x, y)
+	// pdf.MultiCell(124.0, lineHt*1.5, "312 burhan plaza\n Uttora S/3\n312 Dhaka", gofpdf.BorderNone, gofpdf.AlignLeft, false)
+	y = y + lineHt + 1.5
+	pdf.Text(x, y, "Client Name")
+	y = y + lineHt + 1.25
+	pdf.Text(x, y, "123 Client Address")
+	y = y + lineHt + 1.25
+	pdf.Text(x, y, "City, State, Cuntry")
+	y = y + lineHt + 1.25
+	pdf.Text(x, y, "Postel Code")
+
 	// Grid
-	// drawGrid(pdf)
+	drawGrid(pdf)
 
 	err := pdf.OutputFileAndClose("pdf1.pdf")
 	if err != nil {
