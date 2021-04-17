@@ -61,8 +61,6 @@ func main() {
 	x, y := xIndent, bannerHt+lineHt+2.0
 	pdf.Text(x, y, "Billed To")
 	pdf.SetTextColor(50, 50, 50)
-	// pdf.MoveTo(x, y)
-	// pdf.MultiCell(124.0, lineHt*1.5, "123 Client Address\nCity, State, Cuntry\nPostel Code", gofpdf.BorderNone, gofpdf.AlignLeft, false)
 	y = y + lineHt + 1.5
 	pdf.Text(x, y, "Client Name")
 	y = y + lineHt + 1.25
